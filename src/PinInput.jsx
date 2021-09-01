@@ -74,6 +74,7 @@ class PinInput extends Component {
       onChange(pin, index - 1);
       this.forceUpdate(() => {
         setTimeout(() => {
+          this.elements[index - 1].type = 'password';
           this.elements[index - 1].focus();
         }, 200);
       })
