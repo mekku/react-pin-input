@@ -74,8 +74,9 @@ class PinInput extends Component {
       onChange(pin, index - 1);
       this.forceUpdate(() => {
         setTimeout(() => {
-          this.elements[index - 1].type = 'tel';
-          this.elements[index - 1].value = '';
+          this.elements[index - 1].state.value = '';
+          this.elements[index - 1].input.type = 'tel';
+          this.elements[index - 1].input.value = '';
           this.elements[index - 1].focus();
           console.log(this.elements[index - 1])
         }, 200);
