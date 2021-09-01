@@ -77,6 +77,7 @@ class PinInput extends Component {
           this.elements[index - 1].type = 'tel';
           this.elements[index - 1].value = '';
           this.elements[index - 1].focus();
+          console.log(this.elements[index - 1])
         }, 200);
       })
     }
