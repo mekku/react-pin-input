@@ -69,9 +69,10 @@ class PinInput extends Component {
 
     if (index > 0) {
       const pin = this.values.join('');
-      onChange(pin, index - 1);
       console.log(index)
       console.log(pin)
+      onChange(pin, index - 1);
+      this.forceUpdate()
       setTimeout(() => {
         this.elements[index - 1].focus();
       }, 200);
