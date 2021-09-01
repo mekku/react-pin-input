@@ -64,8 +64,12 @@ class PinInput extends Component {
   }
 
   onBackspace(index) {
+    const { onChange } = this.props;
     if (index > 0) {
-      this.elements[index - 1].focus();
+      onChange('', index - 1);
+      setTimeout(() => {
+        this.elements[index - 1].focus();
+      }, 200);
     }
   }
 
@@ -130,8 +134,8 @@ PinInput.defaultProps = {
   validate: null,
   focus: false,
   disabled: false,
-  onChange: () => {},
-  onComplete: () => {},
+  onChange: () => { },
+  onComplete: () => { },
   inputMode: undefined,
   style: {},
   inputStyle: {},
