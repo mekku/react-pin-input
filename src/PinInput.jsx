@@ -72,10 +72,11 @@ class PinInput extends Component {
       console.log(index)
       console.log(pin)
       onChange(pin, index - 1);
-      this.forceUpdate()
-      setTimeout(() => {
-        this.elements[index - 1].focus();
-      }, 200);
+      this.forceUpdate(() => {
+        setTimeout(() => {
+          this.elements[index - 1].focus();
+        }, 200);
+      })
     }
   }
 
